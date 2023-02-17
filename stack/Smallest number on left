@@ -85,7 +85,7 @@ class Solution:
                 arr.append(s.peek())
                 s.push(i)
                 
-            elif i<=s.peek():
+            else:
                 while s.length()>0 and i<=s.peek():
                     s.pop()
                 if s.length() == 0:
