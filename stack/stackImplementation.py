@@ -12,9 +12,13 @@ class stack:
         self.size = 0
         
     def push(self, x):
+        
         newnode = Node(x)
-        newnode.next = self.head
-        self.head = newnode
+        if self.head == None:
+            self.head = newnode
+        else:
+            newnode.next = self.head
+            self.head = newnode
         self.size += 1
         
     def pop(self):
