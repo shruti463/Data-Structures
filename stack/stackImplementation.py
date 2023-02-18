@@ -5,14 +5,12 @@ class Node:
         self.data = data
         self.next = None
         
-        
 class stack:
     def __init__(self):
         self.head= None
         self.size = 0
         
     def push(self, x):
-        
         newnode = Node(x)
         if self.head == None:
             self.head = newnode
@@ -27,22 +25,22 @@ class stack:
         temp = self.head.data
         self.head = self.head.next
         self.size -=1
-        print(temp)
+        return temp
         
     def peek(self):
         if self.head==None:
-            print(math.inf)
+            return -1
         else:
-            print("peek:",self.head.data)
+            return self.head.data
         
     def isEmpty(self):
         if self.head == None:
-            print("list is empty")
+            return True
         else:
-            print("false")
+            return False
             
     def length(self):
-        print("length:",self.size)
+        return self.size
         
     def printStack(self):
         temp = self.head
