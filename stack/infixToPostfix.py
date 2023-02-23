@@ -1,4 +1,4 @@
-def InfixtoPostfix(exp):
+def InfixtoPostfix(self,exp):
         precedence = {"^":3, "+":1, "-":1 ,"*":2, "/":2, "(":0}
         st = [] #operators
         s = ""   #operands
@@ -15,14 +15,19 @@ def InfixtoPostfix(exp):
                     st.append(i)
                 elif precedence[st[-1]] < precedence[i]:
                     st.append(i)
+#               elif i =="^" and st[-1]=="^":
+#                   st.append(i)
                 else:
                     while len(st)!=0 and precedence[i]<=precedence[st[-1]]:
                         x=st.pop()
                         s +=x
                     st.append(i)
+            
                     
             else:
                 s+=i
+        if len(st)!=0:
+            while len(st)!=0:
+                s+=st.pop()
+             
         return s
-      
-print(InfixtoPostfix("a+b*(c^d-e)^(f+g*h)-i"))
