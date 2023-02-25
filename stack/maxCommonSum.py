@@ -1,4 +1,11 @@
 import stack as node
+'''
+def sum(self,a,s):
+        sum = 0
+        for i in range(len(a)):
+            sum +=a[i]
+            s.push(sum)'''
+
 def maxSum(s1,s2,s3):
     while True:
         if s1.isEmpty() or s2.isEmpty() or s3.isEmpty():
