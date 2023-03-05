@@ -13,8 +13,8 @@ class Solution:
 
 	def print2largest(self,arr, n):
 		# code here
-		first = 0
-		second = 0
+		first = -9999999
+		second = -9999999
 		for i in arr:
 		    if i > first and i> second:
 		        second = first
